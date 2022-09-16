@@ -1358,8 +1358,8 @@ class C {
   //   return AppBar(
   //     // backgroundColor: ColorConst.lightGray,
   //     backgroundColor: CC.darkYellow,
-  //     title: const Text(
-  //       'QRdrink',
+  //     title:  Text(
+  //       '${AppConst.name}',
   //       style: TextStyle(color: Color.fromARGB(255, 124, 75, 6)),
   //     ),
   //     foregroundColor: CC.foregroundColor1,

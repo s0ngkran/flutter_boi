@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:93993683862:android:82d6fd498174be16c6abb7",
         "android_client_info": {
-          "package_name": "com.qrdrink.staff"
+          "package_name": "com.songkran.boi"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "93993683862-186ig4ogb7fa9ap5cqjd79ca2ogufljm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.qrdrink.staff",
+            "package_name": "com.songkran.boi",
             "certificate_hash": "161e922876f17ffe7f43098d5e994b83e54bf227"
           }
         },

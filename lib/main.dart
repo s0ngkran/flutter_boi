@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'app_config/app_const.dart';
 import 'app_service.dart';
@@ -82,23 +81,7 @@ class App extends StatelessWidget {
         ),
       ),
       locale: const Locale('th', 'us'),
-      // builder: EasyLoading.init(),
     );
   }
 }
 
-// void configLoading() {
-//   EasyLoading.instance
-//     ..indicatorType = EasyLoadingIndicatorType.threeBounce
-//     ..loadingStyle = EasyLoadingStyle.custom
-//     ..indicatorSize = 45.0
-//     ..radius = 10.0
-//     ..progressColor = Colors.yellow
-//     ..backgroundColor = ColorConst.lightGray
-//     ..indicatorColor = Colors.green
-//     ..textColor = Colors.black
-//     ..maskColor = Colors.red
-//     ..userInteractions = false
-//     ..dismissOnTap = false
-//     ..animationStyle = EasyLoadingAnimationStyle.scale;
-// }

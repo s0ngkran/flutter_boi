@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:aaa/modules/auth/register_scr.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../../app_config/app_const.dart';
 import '../../routes/app_pages.dart';
 import '../../shared/utils/common.dart';
 import '../../shared/widgets/my_statelesswidget.dart';
@@ -59,11 +60,11 @@ class LoginScr extends MyStatelessWidget {
             ///
             ////////// login text
             const Spacer(),
-            Padding(
-              padding: const EdgeInsets.all(C.p),
+            const Padding(
+              padding: EdgeInsets.all(C.p),
               child: Text(
-                'QRdrink demo',
-                style: const TextStyle(
+                '${AppConst.name} demo',
+                style: TextStyle(
                   fontSize: 28,
                 ),
               ),

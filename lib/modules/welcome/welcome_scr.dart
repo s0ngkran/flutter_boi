@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../app_config/app_const.dart';
 import '../../routes/app_pages.dart';
 import '../../shared/utils/common.dart';
 import '../../shared/utils/my_view.dart';
@@ -24,7 +25,7 @@ class WelcomeScr extends View<WelcomeCtl> {
               visible: false,
               child: Text(ctl.dummy.value),
             ),
-            const Text('QRdrink'),
+            const Text('${AppConst.name}'),
           ],
         ),
       ],

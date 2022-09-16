@@ -1,4 +1,4 @@
-package com.qrdrink.staff
+package com.songkran.boi
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 // import 'package:image_picker/image_picker.dart';
 
+import '../../app_config/app_const.dart';
 import '../../app_service.dart';
 import '../../routes/app_pages.dart';
 import '../constants/colors.dart';
@@ -49,7 +50,7 @@ class MyDrawer extends StatelessWidget {
                         Column(
                           children: [
                             Text(
-                              'QRdrink',
+                              AppConst.name,
                               style: TextStyle(
                                 color: CC.onPrimary,
                                 fontSize: 19 * 2,

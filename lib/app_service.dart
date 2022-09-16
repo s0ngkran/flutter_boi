@@ -7,9 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:aaa/shared/utils/my_controller.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:vibration/vibration.dart';
 
-import 'package:awesome_notifications/awesome_notifications.dart';
 
 
 class AppService extends MyCtl {
@@ -90,35 +88,35 @@ class AppService extends MyCtl {
     //   initializationSettings,
     //   onSelectNotification: C.dialogError('noti selected'),
     // );
-    AwesomeNotifications().initialize(
-        // set the icon to null if you want to use the default app icon
-        // 'resource://drawable/res_app_icon',
-        null,
-        [
-          NotificationChannel(
-            channelGroupKey: 'basic_channel_group',
-            channelKey: 'basic_channel',
-            channelName: 'Basic notifications',
-            channelDescription: 'Notification channel for basic tests',
-            defaultColor: const Color(0xFF9D50DD),
-            ledColor: Colors.white,
-          ),
-        ],
-        // Channel groups are only visual and are not required
-        channelGroups: [
-          NotificationChannelGroup(channelGroupkey: 'basic_channel_group', channelGroupName: 'Basic group'),
-        ],
-        debug: true);
+    // AwesomeNotifications().initialize(
+    //     // set the icon to null if you want to use the default app icon
+    //     // 'resource://drawable/res_app_icon',
+    //     null,
+    //     [
+    //       NotificationChannel(
+    //         channelGroupKey: 'basic_channel_group',
+    //         channelKey: 'basic_channel',
+    //         channelName: 'Basic notifications',
+    //         channelDescription: 'Notification channel for basic tests',
+    //         defaultColor: const Color(0xFF9D50DD),
+    //         ledColor: Colors.white,
+    //       ),
+    //     ],
+    //     // Channel groups are only visual and are not required
+    //     channelGroups: [
+    //       NotificationChannelGroup(channelGroupkey: 'basic_channel_group', channelGroupName: 'Basic group'),
+    //     ],
+    //     debug: true);
 
-    AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
-      if (!isAllowed) {
-        // This is just a basic example. For real apps, you must show some
-        // friendly dialog box before call the request method.
-        // This is very important to not harm the user experience
-        AwesomeNotifications().requestPermissionToSendNotifications();
-      }
-    });
-    AwesomeNotifications().actionStream.listen((ReceivedNotification receivedNotification) {
+    // AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+    //   if (!isAllowed) {
+    //     // This is just a basic example. For real apps, you must show some
+    //     // friendly dialog box before call the request method.
+    //     // This is very important to not harm the user experience
+    //     AwesomeNotifications().requestPermissionToSendNotifications();
+    //   }
+    // });
+    // AwesomeNotifications().actionStream.listen((ReceivedNotification receivedNotification) {
       // Navigator.of(context).pushNamed(
       //     '/NotificationPage',
       //     arguments: {
@@ -128,10 +126,10 @@ class AppService extends MyCtl {
       //     }
       // );
       print('tap');
-    });
-    if (kDebugMode) {
-      print('------init local notification');
-    }
+    // });
+    // if (kDebugMode) {
+    //   print('------init local notification');
+    // }
   }
 
   Future<void> handleGoogleSignIn() async {
@@ -152,15 +150,15 @@ class AppService extends MyCtl {
     // await flutterLocalNotificationsPlugin.show(0, 'plain title', text, platformChannelSpecifics, payload: 'item x');
     await 2.delay();
     numNoti.value = numNoti.value + 1;
-    AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: numNoti.value,
-        channelKey: 'basic_channel',
-        title: 'Simple Notification ${numNoti.value}',
-        body: 'Simple body',
-      ),
-    );
-    Vibration.vibrate(pattern: [500, 1000, 500, 2000]);
+    // AwesomeNotifications().createNotification(
+    //   content: NotificationContent(
+    //     id: numNoti.value,
+    //     channelKey: 'basic_channel',
+    //     title: 'Simple Notification ${numNoti.value}',
+    //     body: 'Simple body',
+    //   ),
+    // );
+    // Vibration.vibrate(pattern: [500, 1000, 500, 2000]);
   }
 
   // startPing() async {
