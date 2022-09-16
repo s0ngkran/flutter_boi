@@ -1,14 +1,10 @@
 import 'dart:async';
-import 'package:aaa/routes/app_pages.dart';
-import 'package:aaa/shared/utils/common.dart';
-import 'package:aaa/ui_model/person/ui_person.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:myboi/routes/app_pages.dart';
+import 'package:myboi/shared/utils/common.dart';
+import 'package:myboi/ui_model/person/ui_person.dart';
 import 'package:get/get.dart';
-import 'package:aaa/shared/utils/my_controller.dart';
+import 'package:myboi/shared/utils/my_controller.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
-
 
 class AppService extends MyCtl {
   var dummy = true.obs;
@@ -117,15 +113,15 @@ class AppService extends MyCtl {
     //   }
     // });
     // AwesomeNotifications().actionStream.listen((ReceivedNotification receivedNotification) {
-      // Navigator.of(context).pushNamed(
-      //     '/NotificationPage',
-      //     arguments: {
-      //         // your page params. I recommend you to pass the
-      //         // entire *receivedNotification* object
-      //         id: receivedNotification.id
-      //     }
-      // );
-      print('tap');
+    // Navigator.of(context).pushNamed(
+    //     '/NotificationPage',
+    //     arguments: {
+    //         // your page params. I recommend you to pass the
+    //         // entire *receivedNotification* object
+    //         id: receivedNotification.id
+    //     }
+    // );
+    print('tap');
     // });
     // if (kDebugMode) {
     //   print('------init local notification');
