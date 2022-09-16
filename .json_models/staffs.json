@@ -1,0 +1,30 @@
+{
+  "__className": "staffs_res",
+    "data": {
+        "staffs": [
+            {
+                "id": "22",
+                "lastLogin": "2022-08-25T02:23:53.839182",
+                "username": "9_level_410",
+                "nickname": "9_level_410",
+                "firstName": "",
+                "lastName": "",
+                "dateJoined": "2022-08-25T02:23:53.839182",
+                "email": "",
+                "level": 410,
+                "ownerFk": "fkfkfk",
+                "chainManagerFk": "fkfkfk",
+                "managerFk": "fkfkfk",
+                "branchFk": "fkfkfk",
+                "exp": 3,
+                "tel": "ttt",
+                "address": "tt",
+                "facebook": "ttt",
+                "line": "ttt",
+                "ig": "ttt",
+                "workingStatus": "ttt",
+                "profileImageUrl": "ttt"
+            }
+        ]
+    }
+}

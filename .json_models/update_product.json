@@ -1,0 +1,19 @@
+{
+  "__className": "update_product_res",
+  "data": {
+    "updateProduct": {
+      "product": {
+        "id": "36",
+        "name": "eaoue",
+        "price": 99.87,
+        "margin": 4.5,
+        "displayLine1": "e",
+        "displayLine2": "euuuue",
+        "createdOn": "2022-08-24T06:55:21.463773",
+        "updatedOn": "2022-08-24T06:55:21.463797",
+        "createdBy":"xxx",
+        "updatedBy":"yyy"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "__className": "refresh_token_res",
+  "data": {
+    "refreshToken": {
+      "success": true,
+      "payload": {
+        "username": "superuser",
+        "exp": 1660856607,
+        "origIat": 1660856307
+      },
+      "errors": null,
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InN1cGVydXNlciIsImV4cCI6MTY2MDg1NjYwNywib3JpZ0lhdCI6MTY2MDg1NjMwN30.4ogXR1YBb9FeYN7j9EVJAheD3EEGjr2nSrtIYXtmGjs",
+      "refreshToken": "9b8cc3a0a04bdc9b2cf9c47234e05258db57f067"
+    }
+  }
+}

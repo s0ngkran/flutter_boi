@@ -1,0 +1,142 @@
+{
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        },
+        {
+            "before": [
+                "j",
+                "q"
+            ],
+            "after": [
+                "j",
+                "j",
+                "I",
+            ]
+        },
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "j",
+                "j",
+                "A",
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+    
+        // {
+        //     "before": [
+        //         "<C-l>",
+        //     ],
+        //     "after": [
+        //         "2",
+        //         "0",
+        //         "z",
+        //         "h"
+        //     ],
+        // },
+        {
+            "before": [
+                "<C-h>",
+            ],
+            "after": [
+                "2",
+                "0",
+                "z",
+                "l"
+            ],
+        },
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "s"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        }
+    ],
+    "editor.acceptSuggestionOnEnter": "on",
+    "vim.leader": "<space>",
+    "tabnine.experimentalAutoImports": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            0
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.showInspectorNotificationsForWidgetErrors": false,
+    "editor.formatOnSave": true,
+    "terminal.integrated.inheritEnv": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.silentNotifications": false,
+    "diffEditor.wordWrap": "off",
+    "redhat.telemetry.enabled": true,
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": true,
+    "latex-workshop.view.pdf.viewer": "browser",
+    "git.enableSmartCommit": true,
+    "workbench.editor.showTabs": false,
+    "editor.scrollBeyondLastColumn": 33,
+    "editor.minimap.maxColumn": 1222,
+    "editor.wordWrapColumn": 1222,
+    "editor.wordWrap": "off",
+    "debug.console.wordWrap": false,
+    "dart.lineLength": 1222,
+    "workbench.colorTheme": "CodinCat",
+    // "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.editorAssociations": {
+        "*.pdf": "default"
+    },
+    "bracketPairColorizer.depreciation-notice": false,
+    "jsonToDart.json.codecs": true,
+    "jsonToDart.fastMode": true,
+    "jsonToDart.codeGenerator": "JSON",
+    "files.autoSave": "afterDelay",
+    "dart.analyzerSshHost": null,
+    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "window.zoomLevel": 1,
+    "git.useEditorAsCommitInput": false,
+    // "jsonToDart.toString": ""
+}

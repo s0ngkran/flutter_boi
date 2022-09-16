@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "93993683862",
+    "project_id": "qr-drink",
+    "storage_bucket": "qr-drink.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93993683862:android:82d6fd498174be16c6abb7",
+        "android_client_info": {
+          "package_name": "com.qrdrink.staff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93993683862-186ig4ogb7fa9ap5cqjd79ca2ogufljm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qrdrink.staff",
+            "certificate_hash": "161e922876f17ffe7f43098d5e994b83e54bf227"
+          }
+        },
+        {
+          "client_id": "93993683862-170oqghke8rfe0i84o4on99jhf5gfm39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUe49A3_624D8YBHv7sa2c5UXcR_LBHVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93993683862-170oqghke8rfe0i84o4on99jhf5gfm39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

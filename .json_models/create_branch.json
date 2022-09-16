@@ -1,0 +1,20 @@
+{
+    "__className": "create_branch_res",
+    "errors": [
+        {
+            "message": "xxx"
+        }
+    ],
+    "data": {
+        "createBranch": {
+            "branch": {
+                "id": "6",
+                "ownerFk": "fkfkfk",
+                "chainManagerFk": "fkfkfk",
+                "name": "hello",
+                "createdOn": "2022-08-19T03:00:56.744129",
+                "createdBy":"xxx"
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "__className": "verify_account_res",
+  "data": {
+    "verifyAccount": {
+      "user": {
+        "id": "12",
+        "username": "superuser",
+        "level": 100,
+        "firstName": "",
+        "lastName": "",
+        "lastLogin": "",
+        "email": "admin@gam.com",
+        "ownerFk": "fkfkfk",
+        "chainManagerFk": "fkfkfk",
+        "managerFk": "fkfkfk",
+        "branchFk": "fkfkfk",
+        "tel": "",
+        "address": "",
+        "facebook": "",
+        "line": "",
+        "ig": "",
+        "isStaff": false,
+        "isSuperuser": false
+      }
+    }
+  }
+}

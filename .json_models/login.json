@@ -1,0 +1,41 @@
+
+{
+    "__className": "login_res",
+    "data": {
+        "tokenAuth": {
+            "success": true,
+            "errors": {
+                "nonFieldErrors": [
+                    {
+                        "message": "Please, enter valid credentials.",
+                        "code": "invalid_credentials"
+                    }
+                ]
+            },
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNrIiwiZXhwIjoxNjYwODM5OTA0LCJvcmlnSWF0IjoxNjYwODM5NjA0fQ.mb78QksuX7SY-GkZY1I7vHv6-QlNNNRkuMqqNFkdt8c",
+            "refreshToken": "b64e845cc60748620b4048526a0af19f1bd0a5ed",
+            "user": {
+                "dateJoined": "2022-08-18T22:29:03.880026",
+                "email": "e@e.com",
+                "level": 100,
+                "ownerFk": "fkfkfk",
+                "chainManagerFk": "fkfkfk",
+                "managerFk": "fkfkfk",
+                "branchFk": "fkfkfk",
+                "tel": "te",
+                "address": "tt",
+                "facebook": "tte",
+                "line": "tte",
+                "ig": "tt",
+                "id": "pkpkpk",
+                "verified": false,
+                "username": "sk",
+                "firstName": "",
+                "lastName": "",
+                "exp": "hhh",
+                "workingStatus": "eeekk",
+                "profileImageUrl" : "eeekk"
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "__className": "ping_res",
+    "data": {
+        "ping": "hi"
+    }
+}

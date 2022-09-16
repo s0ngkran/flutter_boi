@@ -1,0 +1,15 @@
+{
+  "__className": "update_category_res",
+  "data": {
+    "updateCategory": {
+      "category": {
+        "id": "17",
+        "name": "e",
+        "createdOn": "2022-08-23T03:44:29.360503",
+        "updatedOn": "2022-08-23T03:44:29.360531",
+        "createdBy":"xxx",
+        "updatedBy":"yyy"
+      }
+    }
+  }
+}

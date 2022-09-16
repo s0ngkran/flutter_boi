@@ -1,0 +1,15 @@
+{
+  "__className": "create_product_res",
+    "data": {
+        "createProduct": {
+            "product": {
+                "id": "9",
+                "name": "ee",
+                "price": 33.4,
+                "margin": 3.4,
+                "displayLine1": "ee",
+                "displayLine2": "ee"
+            }
+        }
+    }
+}

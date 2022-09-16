@@ -1,0 +1,77 @@
+{
+    "__className": "branchs_res",
+    "data": {
+        "branchs": [
+            {
+                "id": "12",
+                "ownerFk": "fkfkfk",
+                "chainManagerFk": "fkfkfk",
+                "name": "branch1",
+                "isActive": true,
+                "createdOn": "2022-08-22T03:15:24.622075",
+                "updatedOn": "2022-08-22T03:15:24.622083",
+                "createdBy":"xxx",
+                "updatedBy":"yyy",
+                "categorySet": [
+                    {
+                        "id": "21",
+                        "name": "เหล้า",
+                        "createdOn": "2022-08-22T03:15:24.622969",
+                        "createdBy":"xxx",
+                        "updatedOn": "2022-08-22T03:15:24.622973",
+                        "updatedBy":"yyy",
+                        "isActive": true,
+                        "productSet": [
+                            {
+                                "id": "21",
+                                "name": "ช้าง",
+                                "price": 172.3,
+                                "margin": 25.4,
+                                "displayLine1": "hh",
+                                "displayLine2": "hh",
+                                "imageUrl": "image",
+                                "createdOn": "2022-08-22T03:15:24.625306",
+                                "updatedOn": "2022-08-22T03:15:24.625310",
+                                "createdBy":"xxx",
+                                "updatedBy":"yyy",
+                                "isActive": true
+                            }
+                        ]
+                    }
+                ],
+                "serviceSet": [
+                    {
+                        "id": "17",
+                        "name": "ขอแก้วเพิ่ม",
+                        "price": 1.1,
+                        "createdOn": "2022-08-22T03:15:24.632507",
+                        "updatedOn": "2022-08-22T03:15:24.632511",
+                        "createdBy":"xxx",
+                        "updatedBy":"yyy"
+                    }
+                ],
+                "zoneSet": [
+                    {
+                        "id": "16",
+                        "name": "A",
+                        "isActive": true,
+                        "createdOn": "2022-08-22T03:15:24.634396",
+                        "updatedOn": "2022-08-22T03:15:24.634400",
+                        "createdBy":"xxx",
+                        "updatedBy":"yyy",
+                        "tableSet": [
+                            {
+                                "id": "109",
+                                "name": "15",
+                                "createdOn": "2022-08-22T03:15:24.650511",
+                                "updatedOn": "2022-08-22T03:15:24.650516",
+                                "createdBy":"xxx",
+                                "updatedBy":"yyy"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

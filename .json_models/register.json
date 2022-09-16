@@ -1,0 +1,44 @@
+{
+    
+  "__className": "register_res",
+
+    "data": {
+        "register": {
+            "success": true,
+            "errors": {
+                "email": [
+                    {
+                        "message": "error message",
+                        "code": "error_code"
+                    }
+                ],
+                "username": [
+                    {
+                        "message": "error message",
+                        "code": "error_code"
+                    }
+                ],
+                "password1": [
+                    {
+                        "message": "error message",
+                        "code": "error_code"
+                    }
+                ],
+                "password2": [
+                    {
+                        "message": "error message",
+                        "code": "error_code"
+                    }
+                ],
+                "nonFieldErrors": [
+                    {
+                        "message": "error message",
+                        "code": "error_code"
+                    }
+                ]
+            },
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc3QxIiwiZXhwIjoxNjYwODQ3MTU2LCJvcmlnSWF0IjoxNjYwODQ2ODU2fQ.ie5mEX3wq9GGQ36vgxaiwNNJkOmAh8FNybPtkchzZ5w",
+            "refreshToken": "b64e845cc60748620b4048526a0af19f1bd0a5ed"
+        }
+    }
+}
