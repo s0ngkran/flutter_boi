@@ -13,32 +13,63 @@ class HomeScr extends TemplateHomeScr {
   List<Widget> content(context) {
     // GoogleSignInAccount? user = app.googleUser?.value;
     return [
-      const Text('from home scr'),
+      // if ((ctl.boards.value?.data ?? []).isEmpty) const Padding(
+      //   padding: EdgeInsets.all(32),
+      //   child: CircularProgressIndicator.adaptive(),
+      // ),
       for (final Datum board in ctl.boards.value?.data ?? [])
-        Card(
-          // color: board.isActive ?? false ? CC.primaryLight : CC.primaryLight,
-          child: CheckboxListTile(
-            title: Text(
-              '${board.title}',
+        Dismissible(
+          key: Key('board id ${board.id}'),
+          onDismissed: (dir) async {
+            await ctl.updateBoard(board.id ?? 1, isActive: false);
+            await ctl.getBoards();
+          },
+          child: Padding(
+            padding:const EdgeInsets.symmetric(horizontal: 8.0,),
+            child: Card(
+              // color: board.isActive ?? false ? CC.primaryLight : CC.primaryLight,
+              child: CheckboxListTile(
+                title: C.textP(
+                  // ignore: unnecessary_string_interpolations
+                  '${board.title ?? 'ไม่มีชื่อ'}',
+                ),
+                subtitle: C.textPP('${board.description ?? ''}'),
+                onChanged: (bool? value) async {
+                  await ctl.updateBoard(board.id ?? 1, isChecked: value!);
+                  await ctl.getBoards();
+                },
+                value: board.isChecked,
+              ),
             ),
-            onChanged: (bool? value) async {
-              await ctl.updateBoard(board.id ?? 1, isChecked: value!);
-              await ctl.getBoards();
-            },
-            value: board.isChecked,
           ),
         ),
-      C.buttonAdd(
-        () {
-          dialogCreateBoard();
-        },
+      Padding(
+            padding:const EdgeInsets.symmetric(horizontal: 8.0,),
+        child: Card(
+          // color: board.isActive ?? false ? CC.primaryLight : CC.primaryLight,
+          child: ListTile(
+            title: C.textP(
+              'เพิ่ม...',
+              textColor: CC.grey6,
+            ),
+                subtitle: C.textPP(''),
+            onTap: () {
+              dialogCreateBoard();
+            },
+          ),
+        ),
       ),
-      C.button(
-        'get',
-        () async {
-          await ctl.getBoards();
-        },
-      ),
+      // C.buttonAdd(
+      //   () {
+      //     dialogCreateBoard();
+      //   },
+      // ),
+      // C.button(
+      //   'get',
+      //   () async {
+      //     await ctl.getBoards();
+      //   },
+      // ),
     ];
   }
 }

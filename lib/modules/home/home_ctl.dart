@@ -30,6 +30,8 @@ class HomeCtl extends MyCtl {
     //   app.googleUser = account.obs;
     // });
     // app.googleSignIn.signInSilently();
+    // await 0.5.delay();
+    getBoards();
   }
 
   // @override

@@ -3,6 +3,7 @@ import 'dart:convert';
 class Datum {
   int? id;
   String? title;
+  String? description;
   int? sortingIndex;
   bool? isActive;
   bool? isChecked;
@@ -13,11 +14,13 @@ class Datum {
     this.sortingIndex,
     this.isActive,
     this.isChecked,
+    this.description,
   });
 
   factory Datum.fromMap(Map<String, Object?> data) => Datum(
         id: data['id'] as int?,
         title: data['title'] as String?,
+        description: data['description'] as String?,
         sortingIndex: data['sorting_index'] as int?,
         isActive: data['is_active'] as bool?,
         isChecked: data['is_checked'] as bool?,
@@ -26,6 +29,7 @@ class Datum {
   Map<String, Object?> toMap() => {
         'id': id,
         'title': title,
+        'description': description,
         'sorting_index': sortingIndex,
         'is_active': isActive,
         'is_checked': isChecked,

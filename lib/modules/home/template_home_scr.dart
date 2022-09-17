@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import '../../app_service.dart';
 import '../../shared/constants/colors.dart';
@@ -32,20 +33,22 @@ class TemplateHomeScr extends View<HomeCtl> {
       ),
       // bottomNavigationBar: BottomNav(),
       drawer: MyDrawer(),
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: CC.onPrimary,
+        child: const Icon(FontAwesomeIcons.arrowsRotate),
+        onPressed: () async {
+          await ctl.getBoards();
+        },
+      ),
       body: SizedBox.expand(
-        child: RefreshIndicator(
-          onRefresh: () async {
-            ctl.getBoards();
-          },
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                C.rowH(),
-                C.textH6('Welcome to my boi'),
-                C.rowH(),
-                ...content(context),
-              ],
-            ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              C.rowH(),
+              C.textH6('Welcome to my checklist'),
+              C.rowH(),
+              ...content(context),
+            ],
           ),
         ),
       ),

@@ -9,7 +9,7 @@ dialogCreateBoard() {
   const String name = 'บอร์ด';
   // ignore: unnecessary_brace_in_string_interps
   ctl.titleTemplate.text = '${name}ใหม่';
-  ctl.descriptionTemplate.text = 'รายละเอียด${name}';
+  ctl.descriptionTemplate.text = '';
   C.dialog(
     // ignore: unnecessary_brace_in_string_interps
     title: 'เพิ่ม${name}ใหม่',
@@ -22,7 +22,8 @@ dialogCreateBoard() {
             // ignore: unnecessary_brace_in_string_interps
             labelText: 'ชื่อ${name}',
             validator: (val) {
-              return;
+              if (val.isEmpty) return 'ได้โปรดดด ใส่ชื่อ';
+              return null;
             },
           ),
           C.rowH(),
@@ -38,7 +39,7 @@ dialogCreateBoard() {
       ),
     ),
     actions: [
-      C.button('ยืนยัน', () async {
+      C.button('สร้าง', () async {
         SSS sta = await ctl.createBoard();
         switch (sta) {
           case SSS.success:

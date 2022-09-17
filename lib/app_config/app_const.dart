@@ -3,7 +3,8 @@ class AppConst {
   // static const baseUrl = 'http://localhost:8000/api/v1/qr';
   static const baseUrlUser = 'http://192.168.1.4:8000/api/v1/user';
   // static const baseUrl = 'http://192.168.1.4:8000/api/v1/qr';
-  static const baseUrl = 'http://localhost:8000/my-temp';
+  // static const baseUrl = 'http://localhost:8000/my-temp';
+  static const baseUrl = 'http://139.59.127.124/vr/';
   static const name = 'Boi';
 
   static const digitalOceanRegion = 'fra1';
