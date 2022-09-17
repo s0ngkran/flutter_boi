@@ -1,20 +1,39 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
+import 'package:http/http.dart' as http;
 
-// import '../../models/response/error_response.dart';
-
-FutureOr<dynamic> responseInterceptor(Request request, Response response) async {
-  // EasyLoading.dismiss();
-
+MyResponse responseInterceptor(
+    http.Request request, http.StreamedResponse response) {
   if (response.statusCode != 200) {
-    // var message = ErrorResponse(error: '${response.body}');
-    print('API error');
-    print('statusCode=${response.statusCode} [${response.body}]');
-    return response;
+    if (kDebugMode) {
+      print('API error');
+      print('statusCode=${response.statusCode} [${response.reasonPhrase}]');
+    }
+    return MyResponse(
+      success: false,
+      errorMessage: '${response.reasonPhrase}',
+      response: response,
+    );
   }
 
-  return response;
+  return MyResponse(
+    success: true,
+    response: response,
+  );
 }
 
+class MyResponse {
+  final bool success;
+  final String? errorMessage;
+  final http.StreamedResponse? response;
+
+  MyResponse({
+    required this.success,
+    this.errorMessage,
+    this.response,
+  });
+  Future<String> get read async => await response!.stream.bytesToString();
+}

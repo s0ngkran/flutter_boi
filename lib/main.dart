@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'api/api_repository.dart';
+import 'api/rest_api/api_provider.dart';
 import 'app_config/app_const.dart';
 import 'app_service.dart';
 import 'firebase_options.dart';
@@ -23,6 +25,7 @@ void main() async {
   //   },
   // );
   Get.put(AppService());
+  Get.put(ApiProviderRest());
   runApp(const App());
   // configLoading();
 }
@@ -84,4 +87,3 @@ class App extends StatelessWidget {
     );
   }
 }
-

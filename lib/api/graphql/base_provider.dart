@@ -24,6 +24,26 @@ class BaseProviderGraphql {
   //   var request = http.Request('GET', Uri.parse(ApiConstants.baseUrl + url));
   //   return apiSend(request, data: null, auth: auth);
   // }
+  Future noRefresh(apiFunc, mapFunc) async {
+    final res = await apiFunc();
+    if (kDebugMode) {
+      print('res1 = $res');
+    }
+    // ignore: prefer_typing_uninitialized_variables
+    var resp;
+    if (res != null) {
+      resp = mapFunc(res);
+      if (resp.data == null) {
+        return null;
+      } else {
+        return resp;
+      }
+    }
+    if (kDebugMode) {
+      print('cannot connect to server');
+    }
+    return null;
+  }
 
   Future<Map<String, dynamic>?>? post({
     Map<String, dynamic>? data,
@@ -140,7 +160,8 @@ class BaseProviderGraphql {
     }
   }
 
-  Future<Map<String, dynamic>?>? handleResponse(StreamedResponse? response) async {
+  Future<Map<String, dynamic>?>? handleResponse(
+      StreamedResponse? response) async {
     if (response == null) {
       // C.dialog(
       //   content:

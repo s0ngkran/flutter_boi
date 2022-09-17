@@ -219,7 +219,8 @@ class C {
     double padTop = padding * 1.5 - normal;
     if (padTop < 0) padTop = 0.0;
     return Padding(
-      padding: EdgeInsets.only(top: padTop, left: padding, bottom: padding, right: padding),
+      padding: EdgeInsets.only(
+          top: padTop, left: padding, bottom: padding, right: padding),
       child: Text(
         title,
         overflow: overflow,
@@ -227,7 +228,9 @@ class C {
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: fontWeight,
-          color: (textColor != null) ? textColor : (blackColorText ? CC.onBackground : CC.onPrimary),
+          color: (textColor != null)
+              ? textColor
+              : (blackColorText ? CC.onBackground : CC.onPrimary),
           // fontWeight: FontWeight.bold,
         ),
       ),
@@ -493,7 +496,8 @@ class C {
                         },
                         child: Text(
                           '• ${text['tel']} ${o.text}',
-                          style: const TextStyle(color: Color.fromARGB(255, 1, 15, 144)),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 1, 15, 144)),
                         ),
                       );
                     } else if (o.runtimeType == LinkUrl) {
@@ -507,7 +511,8 @@ class C {
                           },
                           child: Text(
                             '• ${o.url}',
-                            style: const TextStyle(color: Color.fromARGB(255, 1, 15, 144)),
+                            style: const TextStyle(
+                                color: Color.fromARGB(255, 1, 15, 144)),
                           ),
                         );
                       } else {
@@ -520,7 +525,8 @@ class C {
                           },
                           child: Text(
                             '• ${o.label}',
-                            style: const TextStyle(color: Color.fromARGB(255, 1, 15, 144)),
+                            style: const TextStyle(
+                                color: Color.fromARGB(255, 1, 15, 144)),
                           ),
                         );
                       }
@@ -826,7 +832,9 @@ class C {
               : Text(labelText),
           // labelText: labelText,
           border: OutlineInputBorder(
-            borderRadius: isRound ? BorderRadius.circular(50) : BorderRadius.circular(5.0),
+            borderRadius: isRound
+                ? BorderRadius.circular(50)
+                : BorderRadius.circular(5.0),
             borderSide: const BorderSide(color: Colors.grey, width: 0.0),
           ),
           enabledBorder: !isRound
@@ -1214,6 +1222,14 @@ class C {
     );
   }
 
+  static Widget listTile({
+    Widget? child,
+  }) {
+    return ListTile(
+      title: child,
+    );
+  }
+
   // ignore: non_constant_identifier_names
   static Widget button(
     String text,
@@ -1315,7 +1331,8 @@ class C {
     bool subAppBar = false,
   }) {
     return AppBar(
-      backgroundColor: subAppBar ? CC.primaryLight : backgroundColor ?? CC.primary,
+      backgroundColor:
+          subAppBar ? CC.primaryLight : backgroundColor ?? CC.primary,
       foregroundColor: CC.onPrimary,
       bottom: bottom,
       title: Text(

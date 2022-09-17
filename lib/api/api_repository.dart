@@ -1,11 +1,37 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'api.dart';
+import 'package:myboi/api/response_model/board_res/board_res.dart';
+import 'package:myboi/api/response_model/create_board_req.dart';
+import 'package:myboi/api/response_model/create_board_res/create_board_res.dart';
+import 'package:myboi/api/response_model/update_board_req.dart';
+import 'package:myboi/api/rest_api/api_provider.dart';
+import 'package:myboi/api/rest_api/response_interceptor.dart';
 
 class ApiRepository {
   ApiRepository({required this.apiProvider});
-  final ApiProvider apiProvider;
+  final ApiProviderRest apiProvider;
+
+  Future<BoardRes?> getBoard() async {
+    MyResponse myResp = await apiProvider.getBoard();
+    var resp = !myResp.success ? null : BoardRes.fromJson(await myResp.read);
+    return resp;
+  }
+
+  Future<CreateBoardRes?> createBoard(CreateBoardReq data) async {
+    MyResponse myResp = await apiProvider.createBoard(data);
+    var resp =
+        !myResp.success ? null : CreateBoardRes.fromJson(await myResp.read);
+    return resp;
+  }
+
+  /// same resp result with create
+  Future<CreateBoardRes?> updateBoard(UpdateBoardReq data) async {
+    MyResponse myResp = await apiProvider.updateBoard(data);
+    var resp =
+        !myResp.success ? null : CreateBoardRes.fromJson(await myResp.read);
+    return resp;
+  }
 
   // Future<RegisterResponse?> register(RegisterRequest data) async {
   //   final res = await apiProvider.register('/api/register', data);
@@ -30,8 +56,6 @@ class ApiRepository {
   //   }
   //   return null;
   // }
-
-  
 
   ////////////////////////// template
   // Future refresh() async {
@@ -84,24 +108,4 @@ class ApiRepository {
   //   return null;
   // }
 
-  Future noRefresh(apiFunc, mapFunc) async {
-    final res = await apiFunc();
-    if (kDebugMode) {
-      print('res1 = $res');
-    }
-    // ignore: prefer_typing_uninitialized_variables
-    var resp;
-    if (res != null) {
-      resp = mapFunc(res);
-      if (resp.data == null) {
-        return null;
-      } else {
-        return resp;
-      }
-    }
-    if (kDebugMode) {
-      print('cannot connect to server');
-    }
-    return null;
-  }
 }

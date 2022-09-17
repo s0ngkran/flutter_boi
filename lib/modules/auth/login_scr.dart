@@ -185,7 +185,8 @@ class LoginScr extends MyStatelessWidget {
                       Get.toNamed(Routes.home);
                       break;
                     case SSS.notVerifiedUser:
-                      C.dialogError('บัญชีของคุณยังไม่ได้รับการตรวจสอบ โปรดติดต่อผู้ดูแลระบบ เพื่อขอเข้าใช้บริการ ${C.adminPhone}');
+                      C.dialogError(
+                          'บัญชีของคุณยังไม่ได้รับการตรวจสอบ โปรดติดต่อผู้ดูแลระบบ เพื่อขอเข้าใช้บริการ ${C.adminPhone}');
                       break;
                     default:
                       C.dialogError('รหัสผ่านไม่ถูกต้อง');

@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-
 // Storage Service
 class SS extends GetxService {
   Future<bool> init() async {

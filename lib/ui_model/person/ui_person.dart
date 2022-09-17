@@ -28,7 +28,6 @@ class UiPerson with _$UiPerson {
     @Default(StaffStatus.offline) StaffStatus? status,
   }) = _UiPerson;
 
-  factory UiPerson.fromJson(Map<String, Object?> json) => _$UiPersonFromJson(json);
-
-
+  factory UiPerson.fromJson(Map<String, Object?> json) =>
+      _$UiPersonFromJson(json);
 }

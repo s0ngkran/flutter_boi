@@ -33,11 +33,20 @@ class TemplateHomeScr extends View<HomeCtl> {
       // bottomNavigationBar: BottomNav(),
       drawer: MyDrawer(),
       body: SizedBox.expand(
-        child: Column(
-          children: <Widget>[
-            const Text('Welcome to my boi'),
-            ...content(context),
-          ],
+        child: RefreshIndicator(
+          onRefresh: () async {
+            ctl.getBoards();
+          },
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                C.rowH(),
+                C.textH6('Welcome to my boi'),
+                C.rowH(),
+                ...content(context),
+              ],
+            ),
+          ),
         ),
       ),
     );
